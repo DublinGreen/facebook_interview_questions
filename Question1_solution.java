@@ -7,8 +7,7 @@ class PairSums {
 
   // Add any helper functions you may need here
 
-
-  int numberOfWays(int[] arr, int k) {
+   int numberOfWays(int[] arr, int k) {
     // Write your code here
     int validPairs = 0; // valid pair counter
     
@@ -18,7 +17,9 @@ class PairSums {
       if(arr[depth1] < k){  
         // iterate over arr again but this time looking for value to add with arr[depth1]
         // e.g look for arr[depth1] + arr[depth2] to equal k
-        for(int depth2 = 0; depth2 < arr.length; depth2++){
+        // becuase with all moving forward in the arr with add i to depth1 to move to the next slot
+        // this will eliminate non useful cycle
+        for(int depth2 = depth1 + 1; depth2 < arr.length; depth2++){
           // very important from the arr, we only moving forward down the array 
           // indexToUse is the current slot in the arr we checking, from where depth1 is plus 1
           int indexToUse = depth1 + 1;
