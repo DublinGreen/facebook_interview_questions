@@ -12,28 +12,22 @@ class Main {
     System.out.println("input : " + input);
     System.out.println("rotationFactor : " + rotationFactor);
     
+
     String alphabetsLower = "abcdefghijklmnopqrstuvwxyz"; // String of lower alphabets
     String alphabetsUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // String of upper alphabets
     String numbers = "0123456789"; // String of numbers    
     char[] finalChar = new char[input.length()];
     
     // Just because we are lazy to type, convert String to char[]
-    char[] alphabetsLowerChar = new char[alphabetsLower.length()]; 
-    for (int i = 0; i < alphabetsLower.length(); i++) { 
-      alphabetsLowerChar[i] = alphabetsLower.charAt(i); 
-    } 
+    char[] alphabetsLowerChar = alphabetsLower.toCharArray();
     
     // Just because we are lazy to type, convert String to char[]
-    char[] alphabetsUpperChar = new char[alphabetsUpper.length()]; 
-    for (int i = 0; i < alphabetsUpper.length(); i++) { 
-      alphabetsUpperChar[i] = alphabetsUpper.charAt(i); 
-    }
+    char[] alphabetsUpperChar = alphabetsUpper.toCharArray();
     
     // Just because we are lazy to type, convert String to char[]
-    char[] numbersChar = new char[numbers.length()]; 
-    for (int i = 0; i < numbers.length(); i++) { 
-      numbersChar[i] = numbers.charAt(i); 
-    }
+    char[] numbersChar = numbers.toCharArray();
+        
+    char[] inputChar = new char[input.length()]; // char[] of input
         
     char[] inputChar = new char[input.length()]; // char[] of input
     
