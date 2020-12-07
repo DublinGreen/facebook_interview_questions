@@ -123,7 +123,7 @@ class Main {
     }
     
     
-    //String finalString = new String(finalChar);
+    String finalString = new String(finalChar);
     //System.out.println("finalString : " + finalString);
     return finalString;
   }
